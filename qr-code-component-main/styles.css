@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+body {
+  background-color: var(--Light-gray);
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer {
+  width: 320px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 .5rem;
+  flex-direction: column;
+  background-color: var(--White);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 1px 1px 20px 1px var(--Grayish-blue);
+}
+
+.imgContainer {
+  width: 95%;
+  height: 100%;
+  margin-top: .5rem;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.imgContainer img {
+  display: block;
+  width: 100%;
+  transition: transform .5s;
+}
+.infoTitle,
+.info {
+  font-family: "Outfit", sans-serif;
+  padding: 0 .8rem;
+}
+.info {
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: var(--Grayish-blue);
+}
+
+.infoTitle {
+  font-weight: 700;
+  color: var(--Dark-blue);
+}
+
+@media screen and (max-width:360px) {
+  .cardContainer{
+    margin: .5rem;
+  }
+}
+
+.imgContainer img:hover{
+  transform: scale(1.4);
+}
